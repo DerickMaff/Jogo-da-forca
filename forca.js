@@ -14,8 +14,8 @@ const see_word = document.getElementById('BotaoLetra1');
 const wrong = document.getElementById('PalavrasErradas'); 
 
 /* Parte de aparecer o corpo conforme o erro */
-const trunk = document.getElementById('corpo'); // aparecer o corpo 
-const cabeca_appear = document.getElementById('Cabeca')
+const trunk = document.getElementById('cabeca-container'); // aparecer o corpo 
+const little_cup = document.getElementById('tronco') //aparecer tronco
 
 
 
@@ -124,13 +124,13 @@ if (!Palavra_inteira.includes(Letra_escolhida) && !letra_errada.includes(Letra_e
     console.log(letra_errada.length)
 }
 
+
 if (letra_errada.length === 1){  // Contagem de erros
+trunk.style.display = 'block ';
+}
 
-cabeca_appear.style.display = 'block'
-trunk.style.display = 'block '
-
-console.log('cachorro')
+if(letra_errada.length === 2 ){
+little_cup.style.display = 'block';
 
 }
-    
 });

@@ -188,7 +188,8 @@ font:normal 40px arial;
 }
 
 
-#corpo{
+/* Cabeça do boneco */
+#cabeca-container{
     position: relative;
     right: 440px;
     top:100px;
@@ -197,9 +198,7 @@ font:normal 40px arial;
     background: rgb(32, 172, 43);
     display: none;
 }
-
-
-.cabeca-boneco::before{
+.cabeca-boneco::before{  /* Fazendo a cabeça (redondo) */
     content: "";
     height:calc(16px * 10);
     width:calc(16px * 10);
@@ -207,4 +206,28 @@ font:normal 40px arial;
     background: white;
     position: absolute;
 }
+
+
+
+ /* Tronco do corpo do boneco*/
+#tronco {
+    position: relative;
+    right: 440px;
+    top:100px;
+    display: flex;
+    justify-self: end;
+    background: rgb(32, 172, 43);
+    display: none;
+}
+.Corpo-boneco::before{ /* Fazendo o corpo (Tronco) */
+    content: "";
+    height:calc(16px * 10);
+    width:calc(16px * 3);
+    border-radius:100px;
+    background: white;
+    position: absolute;
+    margin-top:150px;
+    margin-left:55px;
+}
+
 
