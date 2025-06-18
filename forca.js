@@ -11,15 +11,21 @@ const error = document.getElementById('box-erro');
 
 /* Parte para conferiri a palavra */
 const see_word = document.getElementById('BotaoLetra1');
-const wrong = document.getElementById('PalavrasErradas');
+const wrong = document.getElementById('PalavrasErradas'); 
+
+/* Parte de aparecer o corpo conforme o erro */
+const trunk = document.getElementById('corpo'); // aparecer o corpo 
+const cabeca_appear = document.getElementById('Cabeca')
+
 
 
 
 // Fazer mudar a pocidade quando é apertado no 'TEXTO' para escrever qual vai ser a palavra da força
 input_text.addEventListener('click', () => {
-input_text.style.opacity ='1';
+input_text.style.opacity = 1;
 
 });
+
 
 /* Poder apertar enter e funcionar como o botao*/
 input_adivinha.addEventListener('keydown', (event) => {
@@ -33,12 +39,12 @@ input_adivinha.addEventListener('keydown', (event) => {
 /*  Evento para mudar de cor o input de adivinhar (segunda parte ) */
 input_adivinha.addEventListener('click', () => {
 
-input_adivinha.style.opacity = '1';
+input_adivinha.style.opacity = 1;
 input_adivinha.style.background ='rgba(87, 193, 34, 0.803)';
-
 });
+
 input_adivinha.addEventListener('blur', () => {
-input_adivinha.style.opacity = '0.3';
+input_adivinha.style.opacity = 0.3;
 input_adivinha.style.background = ' white';  // Sumir a cor dentro do input (sumir com o verde ) 
 });
 
@@ -53,8 +59,10 @@ if (  Palavra === 0  ){
     input_text.placeholder= 'ERRO, digite alguma coisa';
     
 }else{
-    error.style.display = 'block';
-    main_clear.style.display = 'none';
+
+
+    error.style.display = 'block'; // aparecer a segunda
+    main_clear.style.display = 'none';  //tirar a primeira parte
     question.style.display = 'block'  //aparecer as perguntas
     Mudar_Para_Tracos();
 }
@@ -62,7 +70,7 @@ if (  Palavra === 0  ){
 });
 
 
-let counter_traits = []; // vetor para fazer os '__ '
+let counter_traits = []; // vetor para fazer os ' __ '
 
 function Mudar_Para_Tracos(){  //fazer os traços do jogo 
 counter_traits = [];
@@ -76,7 +84,7 @@ for(let i of text){
     }
     else{
         
-        counter_traits.push("__");  // trocar pela letra
+        counter_traits.push("_");  // trocar pela letra
     }
 }
 traits.textContent = counter_traits.join(" ");  // 'join(" ")' serve para mostrar com os espaços 
@@ -107,33 +115,22 @@ traits.textContent = counter_traits.join(" ");
 input_adivinha.value = '';
 input_adivinha.focus();
 
+
 if (!Palavra_inteira.includes(Letra_escolhida) && !letra_errada.includes(Letra_escolhida)){
 
-        letra_errada.push(Letra_escolhida); 
-        Palavras_erradas.textContent = "ERROS:" + letra_errada.join(", "); 
-    }
+    letra_errada.push(Letra_escolhida); 
+    Palavras_erradas.textContent = "ERROS:" + letra_errada.join(", ");
     
-    console.log(letra_errada);///////////
+    console.log(letra_errada.length)
+}
+
+if (letra_errada.length === 1){  // Contagem de erros
+
+cabeca_appear.style.display = 'block'
+trunk.style.display = 'block '
+
+console.log('cachorro')
+
+}
     
 });
-
-
-
-// const ConferirErro = () =>{
-
-// const Palavras_erradas = wrong;
-
-// if (Palavra_inteira !== Letra_escolhida){
-
-// Letra_escolhida.addEventListener('input', () => {
-
-// Palavras_erradas.textContent = Letra_escolhida.value;
-
-// })
-
-
-// }
-
-
-// console.log(Letra_escolhida)
-// }

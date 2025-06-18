@@ -7,31 +7,30 @@ body{
 
 /* Texto de cima (inicio) */
 #TituloComeco{
-
-background-color:rgba(4, 73, 27, 0.822);
-padding:25px;
-margin:0;
-text-align:center;
-font-size:20px;
-position:relative;
-color:rgb(34, 238, 228);
-text-shadow: 5px 5px 20px white;
-border-radius:30px;
+    background-color:rgba(4, 73, 27, 0.822);
+    padding:25px;
+    margin:0;
+    text-align:center;
+    font-size:20px;
+    position:relative;
+    color:rgb(34, 238, 228);
+    text-shadow: 5px 5px 20px white;
+    border-radius:30px;
 
 }
 
  /* INPUT */
 #PalavaraEscolhida{
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-font-size:25px;
-width:600px; 
-padding:13px;
-box-shadow: 7px 7px 20px black;
-border:none;
-opacity:0.2;
-margin-top:80px;
-border-radius:60px;
-text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:25px;
+    width:600px; 
+    padding:13px;
+    box-shadow: 7px 7px 20px black;
+    border:none;
+    opacity:0.2;
+    margin-top:80px;
+    border-radius:60px;
+    text-align: center;
 
 
 }
@@ -42,11 +41,9 @@ text-align: center;
 
 /* palavara (da escolha de palavras) */
 #palavra{
-
-
-font:normal 60px arial;
-color:rgb(255, 255, 255);
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font:normal 60px arial;
+    color:rgb(255, 255, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
@@ -56,15 +53,15 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
     display: flex;
     padding:25px;
     align-items: center;
-font-size:20px;
-margin-top:230px;
-margin-left:30px;
-width:120px;
-height:40px;
-opacity:0.4;
-text-align: center;
-border-radius:40px; 
-border:none;
+    font-size:20px;
+    margin-top:230px;
+    margin-left:30px;
+    width:120px;
+    height:40px;
+    opacity:0.4;
+    text-align: center;
+    border-radius:40px; 
+    border:none;
 }
 
 .Pronto:hover{
@@ -90,87 +87,86 @@ border:none;
 
 /* CONTAINER (da escolha de palavras)  */
 .EscolherPalavra{
-box-shadow:5px 5px 10px rgba(0, 58, 14, 0.568);
-border-radius:40px;
-position:absolute;
-background-image:linear-gradient(rgba(128, 128, 128, 0.623), rgba(0, 0, 0, 0.733));
-display:flex; 
-justify-self:center;
-justify-content:center;
-align-items: center;
-text-align:right;
-padding:50px 200px 150px 200px;
-width: 500px;
-height:320px;
-left:50%;
-right:50%;
-top:220px;
+    box-shadow:5px 5px 10px rgba(0, 58, 14, 0.568);
+    border-radius:40px;
+    position:absolute;
+    background-image:linear-gradient(rgba(128, 128, 128, 0.623), rgba(0, 0, 0, 0.733));
+    display:flex; 
+    justify-self:center;
+    justify-content:center;
+    align-items: center;
+    text-align:right;
+    padding:50px 200px 150px 200px;
+    width: 500px;
+    height:320px;
+    left:50%;
+    right:50%;
+    top:220px;
 }
 
 /* Acima é a primeira parte (disigne) */
 
 #central{
-position: absolute;
+    position: absolute;
 }
 
 .container_perguntas{
-background-color: rgba(5, 149, 29, 0.94);
+    background-color: rgba(5, 149, 29, 0.94);
     display:inline-flex;
     justify-self: center;
     top:20px;
- width:500px;
- max-height:800px;
- padding:50px;
- color:white;
-position: relative;
-border-radius:50px;    
-display: none;
+    width:500px;
+    max-height:800px;
+    padding:50px;
+    color:white;
+    position: relative;
+    border-radius:50px;    
+    display: none;
 }
 
 .AparecerTracos{
-font-size: 25px;
-display:flex;
-justify-self: center;
-justify-content: center;
-align-items:center;
-
+    font-size: 25px;
+    display:flex;
+    justify-self: center;
+    justify-content: center;
+    align-items:center;
 }
 
 .ColocarLetra{
-
-padding: 5px;
-border-radius: 20px;
-position: relative;
-font-size:15px;
-text-align: center;
-top:35px;
-right:20px;
-border:5px solid rgb(33, 196, 33);
-opacity:0.3;
+    padding: 5px;
+    border-radius: 20px;
+    position: relative;
+    font-size:15px;
+    text-align: center;
+    top:35px;
+    right:20px;
+    border:5px solid rgb(33, 196, 33);
+    opacity:0.3;
 }
+
 .ColocarLetra:hover{
-opacity:0.8;
+    opacity:0.8;
 }
 
 .LetraEscolhaLetra{
-position: relative;
-top:35px;
-right:20px;
-font:normal 14px arial;
+    position: relative;
+    top:35px;
+    right:20px;
+    font:normal 14px arial;
 }
 
 #BotaoLetra1{
-position: relative;
-right:23px;
-top:33px;
-padding:6px;
-border-radius: 30px;
-border:none;
-background: rgb(33, 196, 33);
+    position: relative;
+    right:23px;
+    top:33px;
+    padding:6px;
+    border-radius: 30px;
+    border:none;
+    background: rgb(33, 196, 33);
 }
-#BotaoLetra1:hover:active{
 
-background: rgb(17, 101, 17);
+#BotaoLetra1:hover:active{
+    background: rgb(17, 101, 17);
 }
 
 #box-erro{
@@ -190,3 +186,25 @@ display: none;
 left:10px;
 font:normal 40px arial;
 }
+
+
+#corpo{
+    position: relative;
+    right: 440px;
+    top:100px;
+    display: flex;
+    justify-self: end;
+    background: rgb(32, 172, 43);
+    display: none;
+}
+
+
+.cabeca-boneco::before{
+    content: "";
+    height:calc(16px * 10);
+    width:calc(16px * 10);
+    border-radius:100px;
+    background: white;
+    position: absolute;
+}
+
