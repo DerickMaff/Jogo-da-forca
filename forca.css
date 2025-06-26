@@ -212,16 +212,15 @@ font:normal 40px arial;
  /* Tronco do corpo do boneco*/
 #tronco {
     position: relative;
-    right: 440px;
-    top:100px;
+    right: 439px;
+    top:90px;
     display: flex;
     justify-self: end;
-    background: rgb(32, 172, 43);
     display: none;
 }
 .Corpo-boneco::before{ /* Fazendo o corpo (Tronco) */
     content: "";
-    height:calc(16px * 10);
+    height:calc(21px * 11);
     width:calc(16px * 3);
     border-radius:100px;
     background: white;
@@ -231,3 +230,106 @@ font:normal 40px arial;
 }
 
 
+#Braco-Di{
+    position: relative;
+    right:447px;
+    top:250px;
+    display: flex;
+    justify-self:end;
+    display:none;
+}
+.braco-direito::before{ 
+    content: "";
+    height: calc(15px * 11); 
+    width: calc(20px * 1.5);
+    transform: rotate(45deg);
+    background: white;
+    position: absolute;
+    border-radius:0 0 5px 5px ;
+}
+
+
+#Braco-Es{
+    position: relative;
+    right:304px;
+    top:250px;
+    display: flex;
+    justify-self: end;
+    display:none;
+}
+.braco-esquerdo::before{ 
+    content: "";
+    height: calc(15px * 11); 
+    width: calc(20px * 1.5);
+    transform: rotate(-45deg);
+    background: white;
+    position: absolute;
+    border-radius:0 0 5px 5px ;
+}
+
+
+#Perna-es{ 
+    position: relative;
+    right:430px;
+    top:420px;
+    display: flex;
+    justify-self: end;
+    display: none;
+}
+.perna-esquerda::before{
+    content: ""; 
+    height: calc(16px * 12 );
+    width: calc(3px * 10 );
+    background: white;
+    position: absolute;
+    border-radius:5px;
+    transform:rotate(35deg);
+}
+
+
+#Perna-di{ 
+    position: relative;
+    right:318px;
+    top:420px;
+    display: flex;
+    justify-self:end;
+    display: none;
+}
+.perna-direita::before{
+    content: ""; 
+    height: calc(16px * 12 );
+    width: calc(3px * 10 );
+    background: white;
+    position: absolute;
+    border-radius:5px;
+    transform:rotate(-35deg);
+}
+
+
+.mensagem{
+    font-size: 100px;
+    color:white;
+    background: rgba(7, 7, 170, 0.767);
+    border:none;
+    padding:40px;
+}
+
+.mensagem:hover{
+    background: blue;
+}
+
+.mensagem-final{
+    background: rgba(7, 7, 170, 0.767);
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    padding:50px 100px;
+    border-radius: 10px;
+}
+
+#final{
+    padding:34vh;
+    background: rgb(34, 33, 33);
+    display: none;
+}

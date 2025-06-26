@@ -16,9 +16,15 @@ const wrong = document.getElementById('PalavrasErradas');
 /* Parte de aparecer o corpo conforme o erro */
 const trunk = document.getElementById('cabeca-container'); // aparecer o corpo 
 const little_cup = document.getElementById('tronco') //aparecer tronco
+const right_arm = document.getElementById('Braco-Di') //Braço direito 
+const left_arm = document.getElementById('Braco-Es') //Braço esquerdo 
+const left_lag = document.getElementById('Perna-es') //Perna esquerda
+const right_leg = document.getElementById('Perna-di') //Perna direita 
 
-
-
+/* Mostrar se o ususario perdeu ou ganhou */
+const startTitle = document.getElementById('TituloComeco'); // mostra o primeiro titulo 
+const end = document.getElementById('final');  // Container de mostrar final 
+const Button_reloud = document.querySelector('.Button-Start');
 
 // Fazer mudar a pocidade quando é apertado no 'TEXTO' para escrever qual vai ser a palavra da força
 input_text.addEventListener('click', () => {
@@ -59,10 +65,8 @@ if (  Palavra === 0  ){
     input_text.placeholder= 'ERRO, digite alguma coisa';
     
 }else{
-
-
-    error.style.display = 'block'; // aparecer a segunda
     main_clear.style.display = 'none';  //tirar a primeira parte
+    error.style.display = 'block'; // aparecer a segunda
     question.style.display = 'block'  //aparecer as perguntas
     Mudar_Para_Tracos();
 }
@@ -103,17 +107,15 @@ for(let i = 0; i< Palavra_inteira.length; i++){
 
 
     if( Palavra_inteira[i] === Letra_escolhida){
-    
         counter_traits[i] = Letra_escolhida;
-
     }
     
 }
 
 
 traits.textContent = counter_traits.join(" ");
-input_adivinha.value = '';
-input_adivinha.focus();
+input_adivinha.value = '';  // Para depois do usuario mandar desaparecer a letra 
+input_adivinha.focus(); // para quando o usuario mandar o cursor voltar
 
 
 if (!Palavra_inteira.includes(Letra_escolhida) && !letra_errada.includes(Letra_escolhida)){
@@ -128,9 +130,36 @@ if (!Palavra_inteira.includes(Letra_escolhida) && !letra_errada.includes(Letra_e
 if (letra_errada.length === 1){  // Contagem de erros
 trunk.style.display = 'block ';
 }
+    if(letra_errada.length === 2 ){
+    little_cup.style.display = 'block';
+    }
+        if(letra_errada.length === 3){
+                right_arm.style.display = 'block';
+        }
+            if(letra_errada.length === 4){
+                left_arm.style.display = 'block';
+            }
+                if(letra_errada.length === 5){
+                    left_lag.style.display = 'block';
+                }
+                    if(letra_errada.length === 6){
+                        right_leg.style.display = 'block';
+                        gameOver();
 
-if(letra_errada.length === 2 ){
-little_cup.style.display = 'block';
-
-}
-});
+                    }   
+                    
+                });
+                
+                
+                const gameOver = () => {
+                    
+                    end.style.display = 'block'
+                    error.style.display = 'none'; 
+                    question.style.display = 'none' 
+                    startTitle.style.display = 'none';
+                    
+                    Button_reloud.addEventListener('click', () => {
+                     location.reload(); // fazer reloud na tela 
+                    });
+                };
+                    
