@@ -20,12 +20,10 @@
 
           <!-- Lugar  ue o usuario vai escolher a palavra -->
         <div id="ContainerPrincipal" class="EscolherPalavra">
-
                 <div id="SumirDepois">
                 <h1 id="palavra"> Escolhe uma palavra</h1>
                 <input type="password" id="PalavaraEscolhida" placeholder="Digite aqui">  
                 </div>   
-
             <button id="BotaoDeIrParaAsPerguntas" class="Pronto"> Pronto </button>
         </div>
 
@@ -33,52 +31,52 @@
              <!-- No JS (Palavra aparecendo já)-->
             <div id="central">
                 <div class="container_perguntas" id="CaixasDePerguntas">
-
-                    <p class="AparecerTracos" id="MudarParaTracos">  Teste sdfes </p>
+                    <p class="AparecerTracos" id="MudarParaTracos">   </p>
                     <button id="BotaoLetra1"> Ver</button>
                     <input maxlength="1" type="text" id="AdivinhaLetra" class="ColocarLetra" >
                     <label class ="LetraEscolhaLetra" for="AdivinhaLetra"> Coloque uma letra</label>
-
                 </div>
             </div>
 
             <div id="box-erro">
-
                 <p id="PalavrasErradas" class="erros"> ERROS: </p>
-
             </div>
-            
+
+            <div id="container_body">
                 <div id="cabeca-container"> 
                     <h2 class="cabeca-boneco">  </h2>
                 </div>
-                    
                     <div id="tronco">
-                        <h2 class="Corpo-boneco">  </h2>
+                        <h2 class= "Corpo-boneco">  </h2>
                     </div>
-
                         <div id="Braco-Di">
                             <h2 class="braco-direito"> </h2>
                         </div>
-
                             <div id="Braco-Es"> 
                                 <h2 class="braco-esquerdo"> </h2>
                             </div>
-
                                 <div id="Perna-es">
                                     <h2 class="perna-esquerda"> </h2>
                                 </div>
-
                                     <div id="Perna-di">
                                         <h2 class="perna-direita"> </h2>
                                     </div>
-<div id="final">
+            </div>
 
-<div class="mensagem-final"> 
-    <button class="mensagem Button-Start">Voce perdeu </button>
+<div id="final-loser">
+<div class="mensagem-final-loser"> 
+    <button class="mensagem-loser Button-Start-loser"> Voce perdeu </button>
 </div>
-
 </div>
                 
+    <div id="final-winner">
+        <div class="mensagem-final-winner">
+            <button class="mensagem-winner Button-winner"> Voce ganhou </button>
+        </div>
+    </div>
+
+
+
         <script src="forca.js"> </script>
 </body>
 </html>

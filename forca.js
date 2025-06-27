@@ -15,18 +15,25 @@ const wrong = document.getElementById('PalavrasErradas');
 
 /* Parte de aparecer o corpo conforme o erro */
 const trunk = document.getElementById('cabeca-container'); // aparecer o corpo 
-const little_cup = document.getElementById('tronco') //aparecer tronco
-const right_arm = document.getElementById('Braco-Di') //Braço direito 
-const left_arm = document.getElementById('Braco-Es') //Braço esquerdo 
-const left_lag = document.getElementById('Perna-es') //Perna esquerda
-const right_leg = document.getElementById('Perna-di') //Perna direita 
+const little_cup = document.getElementById('tronco'); //aparecer tronco
+const right_arm = document.getElementById('Braco-Di'); //Braço direito 
+const left_arm = document.getElementById('Braco-Es'); //Braço esquerdo 
+const left_lag = document.getElementById('Perna-es'); //Perna esquerda
+const right_leg = document.getElementById('Perna-di'); //Perna direita 
 
-/* Mostrar se o ususario perdeu ou ganhou */
+/* Mostrar quando o usuario perde*/
 const startTitle = document.getElementById('TituloComeco'); // mostra o primeiro titulo 
-const end = document.getElementById('final');  // Container de mostrar final 
-const Button_reloud = document.querySelector('.Button-Start');
+const end_loser = document.getElementById('final-loser');  // Container de mostrar final 
+const Button_reloud = document.querySelector('.Button-Start-loser');
 
-// Fazer mudar a pocidade quando é apertado no 'TEXTO' para escrever qual vai ser a palavra da força
+/* Mostrar quando o usuario ganha */
+const end_start = document.getElementById('final-winner'); // Aparecer quando o usuario ganhar
+
+/* Corpo do boneco completo */
+const full_body = document.getElementById('container_body');
+const Button_Winner_reloud = document.querySelector('.Button-winner');
+
+// Fazer mudar a opacidade quando é apertado no 'TEXTO' para escrever qual vai ser a palavra da força
 input_text.addEventListener('click', () => {
 input_text.style.opacity = 1;
 
@@ -74,7 +81,7 @@ if (  Palavra === 0  ){
 });
 
 
-let counter_traits = []; // vetor para fazer os ' __ '
+let counter_traits = []; // vetor para fazer os '_'
 
 function Mudar_Para_Tracos(){  //fazer os traços do jogo 
 counter_traits = [];
@@ -126,40 +133,64 @@ if (!Palavra_inteira.includes(Letra_escolhida) && !letra_errada.includes(Letra_e
     console.log(letra_errada.length)
 }
 
+Body_appper(); // Conferir quando o jogador errar uma letra aparecer uma parte do corpo
 
-if (letra_errada.length === 1){  // Contagem de erros
-trunk.style.display = 'block ';
-}
-    if(letra_errada.length === 2 ){
-    little_cup.style.display = 'block';
-    }
-        if(letra_errada.length === 3){
-                right_arm.style.display = 'block';
+check_winner(); //Conferir se o jogador ganhou
+
+});
+                
+const Body_appper = () =>{
+    if (letra_errada.length === 1){  // Contagem de erros
+        trunk.style.display = 'block ';
         }
-            if(letra_errada.length === 4){
-                left_arm.style.display = 'block';
+            if(letra_errada.length === 2 ){
+            little_cup.style.display = 'block';
             }
-                if(letra_errada.length === 5){
-                    left_lag.style.display = 'block';
+                if(letra_errada.length === 3){
+                        right_arm.style.display = 'block';
                 }
-                    if(letra_errada.length === 6){
-                        right_leg.style.display = 'block';
-                        gameOver();
+                    if(letra_errada.length === 4){
+                        left_arm.style.display = 'block';
+                    }
+                        if(letra_errada.length === 5){
+                            left_lag.style.display = 'block';
+                        }
+                            if(letra_errada.length === 6){
+                                right_leg.style.display = 'block';
+                                gameOver();
+                            }   
+                        
+                            
+};    
 
-                    }   
-                    
-                });
-                
-                
-                const gameOver = () => {
-                    
-                    end.style.display = 'block'
-                    error.style.display = 'none'; 
-                    question.style.display = 'none' 
-                    startTitle.style.display = 'none';
-                    
-                    Button_reloud.addEventListener('click', () => {
-                     location.reload(); // fazer reloud na tela 
-                    });
-                };
-                    
+const gameOver = () => {
+    
+    end_loser.style.display = 'block';
+    error.style.display = 'none'; 
+    question.style.display = 'none'; 
+    startTitle.style.display = 'none';
+    full_body.style.display =  'none';
+
+    Button_reloud.addEventListener('click', () => {
+        location.reload(); // fazer reloud na tela 
+    });
+};
+    
+const Winner = () => {
+    end_start.style.display = 'block'; 
+    error.style.display = 'none'; 
+    question.style.display = 'none'; 
+    full_body.style.display = 'none';
+    startTitle.style.display = 'none';
+
+    Button_Winner_reloud.addEventListener('click', () => {
+        location.reload(); // reloud ao apertar no botão 
+    });
+};
+
+// const check_winner = () => {
+//     if(counter_traits === input_text.value.toLowerCase()){
+//         Winner();
+//     }
+// }; 
+

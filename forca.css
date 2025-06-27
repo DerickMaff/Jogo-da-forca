@@ -229,7 +229,7 @@ font:normal 40px arial;
     margin-left:55px;
 }
 
-
+/*Braço do Boneco*/
 #Braco-Di{
     position: relative;
     right:447px;
@@ -267,7 +267,7 @@ font:normal 40px arial;
     border-radius:0 0 5px 5px ;
 }
 
-
+/*Pernas do boneco */
 #Perna-es{ 
     position: relative;
     right:430px;
@@ -306,20 +306,14 @@ font:normal 40px arial;
 }
 
 
-.mensagem{
-    font-size: 100px;
-    color:white;
-    background: rgba(7, 7, 170, 0.767);
-    border:none;
-    padding:40px;
+/* Mensagem para o final (perdedor) */
+#final-loser{
+    padding:34vh;
+    background: rgb(156, 4, 4);
+    display: none;
 }
-
-.mensagem:hover{
-    background: blue;
-}
-
-.mensagem-final{
-    background: rgba(7, 7, 170, 0.767);
+.mensagem-final-loser{
+    background: rgba(223, 39, 39, 0.767);
     display: flex;
     justify-self: center;
     align-items: center;
@@ -327,9 +321,39 @@ font:normal 40px arial;
     padding:50px 100px;
     border-radius: 10px;
 }
+.mensagem-loser{
+    font-size: 100px;
+    color:white;
+    background: rgba(170, 7, 7, 0.767);
+    border:none;
+    padding:40px;
+}
+.mensagem-loser:hover{
+    background: rgb(255, 0, 0);
+}
 
-#final{
+/*Mensagem para o final ( ganhador) */
+#final-winner{
     padding:34vh;
-    background: rgb(34, 33, 33);
+    background: rgba(180, 177, 22, 0.774);
     display: none;
+}
+.mensagem-final-winner{
+    background: rgba(255, 196, 0, 0.747);
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    padding:50px 100px;
+    border-radius: 10px;
+}
+.mensagem-winner{
+    font-size: 100px;
+    color:white;
+    background: rgba(202, 206, 6, 0.767);
+    border:none;
+    padding:40px;
+}
+.mensagem-winner:hover{
+    background: rgb(196, 177, 5);
 }
